@@ -59,6 +59,7 @@ footer {
     padding: 1rem;
     background: #d197c3;
     box-shadow: 0 0 20px 5px #d197c3;
+    color:#011638;
 }
 
 p{
@@ -67,19 +68,15 @@ p{
 }
 
 
-
-/* ...existing code... */
-
 .nav-section {
   text-align: center;
   margin: 0rem 0;
 }
 
-/* ...existing code... */
 
 .nav-section button {
-  background: #011638;
-  color: white;
+  background: white;
+  color: #011638;
   border: none;
   padding: 1.5rem 1.5rem;
   margin: 0 1rem;
@@ -94,20 +91,83 @@ p{
   width: 5rem;
 }
 
-.nav-section button:hover {
-  background: #F26A8D;
-  box-shadow: 0 0 20px 5px white;
-}
 
 .nav-section i {
   pointer-events: none;
 }
 
-/* ...existing code... */
-
 .nav-section button:hover {
-  background: #cc6cb5;
+    background: #cc6cb5;
+    box-shadow: 0 0 20px 5px white;
 }
 
+.flowing-text {
+  width: 100vw;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 1.3rem;
+  color: #fff;
+  background: rgba(209,151,195,0.85);
+  text-shadow: 0 0 10px #fff, 0 0 20px #d197c3;
+  padding: 0.5rem 0;
+  z-index: 10;
+}
 
+.flowing-text span {
+  display: inline-block;
+  padding-left: 100vw;
+  animation: marquee 18s linear infinite;
+}
 
+.flowing-text.top {
+  top: 0;
+}
+
+.flowing-text.bottom {
+  bottom: 0;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); } /* assuming text is duplicated */
+}
+
+span{
+    color:white;
+}
+
+.footer-inner {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-inner p {
+  margin: 0;
+  padding-right: 0.5rem;
+  color: #011638;
+}
+
+.footer-inner .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-inner .social a {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s, text-shadow 0.2s;
+}
+
+.footer-inner .social a:hover {
+  color: #011638;
+  transform: translateY(-3px);
+  text-shadow: 0 0 10px #fff;
+}
