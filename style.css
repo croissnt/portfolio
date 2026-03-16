@@ -17,7 +17,7 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    background: url("MainImages/ocean_landscape2.0.png") no-repeat center center;
+    background: url("MainImages/oceanBackground.png") no-repeat center center;
     background-size: cover;
 }
 
@@ -108,7 +108,41 @@ p{
     color:#061834;
 }
 
+ul li {
+  position: relative;
+}
+
+ul li ul.dropdown {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  display: none;
+  border-radius: 10px;
+  padding: 10px 0;
+  min-width: 150px;
+  text-align: center;
+  background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+ul li ul.dropdown li {
+  margin-top:10px;
+  display: block;
+  padding: 4px 7px;
+}
+
+ul li ul.dropdown li a {
+  display: block;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
+}
+
+ul li ul.dropdown li a {
+  font-size: 0.8rem;
+}
 /*END OF NAVBAR*/
+
 .social{
     display: flex;
     justify-content:center;
@@ -128,4 +162,22 @@ p{
     font-weight: bold;
     color: white;
     text-decoration: underline;
+}
+
+.resume{
+    background-color: hsla(217, 79%, 11%, 0.70);
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid white;
+}
+
+.home{
+    background-color: hsla(217, 79%, 11%, 0.70);
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid white;
+    text-align: center;
+    width: 50%;
+    align-self:center;
+    align-items: center;
 }
