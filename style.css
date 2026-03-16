@@ -4,35 +4,27 @@ html, body {
   height: auto;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-  flex: 1 0 auto;
-}
-
-footer {
-  flex-shrink: 0;
-  text-align: center;
-  padding: 1rem;
-  background: #f1f1f1;
+  flex: 1;
 }
 
 body {
     flex: 1 0 auto;
-    font-family: Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    color: #011638;
-    background: url("MainImages/flowergif.gif") no-repeat center center fixed;
+    color: white;
+    background: url("MainImages/ocean_landscape2.0.png") no-repeat center center;
     background-size: cover;
 }
 
 header {
     color: white;
     text-align: center;
-    padding: 0rem;
-    background:#d197c3;
-    box-shadow: 0 0 20px 5px #d197c3;
+    padding: 2rem;
 }
 
 h1{
@@ -43,13 +35,18 @@ h1{
 }
 
 h2{
-    text-shadow: 0 0 10px #d197c3;
+    text-shadow: 0 0 10px #061834;
     color:white;
+}
+
+h3{
+  margin:0;
+  margin-bottom: 10px;
 }
 
 p.head{
     font-size:140%;
-    color:#011638;
+    color:#ffffff;
 }
 
 section {
@@ -58,118 +55,77 @@ section {
 
 footer {
     text-align: center;
+    background-color: hsla(0, 0%, 100%, 0.5);
     padding: 1rem;
-    background: #d197c3;
-    box-shadow: 0 0 20px 5px #d197c3;
-    color:#011638;
+    border-radius: 30px;
+    margin: 20px;
 }
 
 p{
     color:white;
-    font-family: "Nanum Myeongjo", serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
-.nav-section {
-  text-align: center;
-  margin: 0rem 0;
+
+/* NAVIGATION LINKS */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 15px 30px;
+    gap: 1rem;
+    color:#061834
 }
 
-
-.nav-section button {
-  background: white;
-  color: #011638;
-  border: none;
-  padding: 1.5rem 1.5rem;
-  margin: 0 1rem;
-  font-size: 2rem;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: box-shadow 0.2s, background 0.2s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 0 transparent;
-  width: 5rem;
+.navlinks {
+    list-style:none;
+    display: flex;
+    margin:0;
+    padding:0;
+    gap:25px;
 }
 
-
-.nav-section i {
-  pointer-events: none;
+.navlinks a {
+    text-decoration: none;
+    color:#061834;
+    font-size: 1.2rem;
 }
 
-.nav-section button:hover {
-    background: #cc6cb5;
-    box-shadow: 0 0 20px 5px white;
+.navlinks a:hover {
+    transition-duration: 0.3s;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: underline;
 }
 
-.flowing-text {
-  width: 100vw;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  font-family: "Nanum Myeongjo", serif;
-  font-size: 1.3rem;
-  color: #fff;
-  background: rgba(209,151,195,0.85);
-  text-shadow: 0 0 10px #fff, 0 0 20px #d197c3;
-  padding: 0.5rem 0;
-  z-index: 10;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color:#061834;
 }
 
-.flowing-text span {
-  display: inline-block;
-  padding-left: 100vw;
-  animation: marquee 18s linear infinite;
+/*END OF NAVBAR*/
+.social{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
 }
 
-.flowing-text.top {
-  top: 0;
+.social a {
+    color: #061834;
+    font-size: 1rem;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
-.flowing-text.bottom {
-  bottom: 0;
-}
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(50%); } /* assuming text is duplicated */
-}
-
-span{
-    color:white;
-}
-
-.footer-inner {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.footer-inner p {
-  margin: 0;
-  padding-right: 0.5rem;
-  color: #011638;
-}
-
-.footer-inner .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.footer-inner .social a {
-  color: #fff;
-  font-size: 2rem;
-  text-decoration: none;
-  transition: color 0.2s, transform 0.2s, text-shadow 0.2s;
-}
-
-.footer-inner .social a:hover {
-  color: #011638;
-  transform: translateY(-3px);
-  text-shadow: 0 0 10px #fff;
+.social a:hover {
+    transition-duration: 0.3s;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
 }
