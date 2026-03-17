@@ -8,10 +8,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>digital art | Selina Li</title>
+  <title>ART | Selina Li</title>
   <link rel="stylesheet" href="../style.css">
   
 </head>
+
 
 
 <body>
@@ -37,17 +38,114 @@
     <center>
 
     <div class = "head">
-        <h1 class = "flow-outline">Selina Li</h1>
-        <p class="head">IMMERSIVE MEDIA DESIGN, COMPUTING</p>
-        <p><b>University of Maryland</b></p>
+        <p class="head">A collection of my artistic and design works.</p>
+        <p><b>CLUBS/CLASSES/PERSONAL PROJECTS</b></p>
     </div>
 
     </center>
   </header>
 
 
-  <main>
-    
+  <main class = "resume">
+
+    <div class = "art">
+      <div class = "descriptions">
+        <h4>OCEAN LANDSCAPE COLLAGE</h4>
+        <p><i>JANUARY 2026</i></p>
+        <p>This is a class project, made in Photoshop with a collage of pictures of UMD campus. Also the background I use for the entire site!</p>
+      </div>
+      <div class = "images">
+        <img src="../Gallery/Digital_Art/images/ocean_landscape2.0.png" alt="Ocean Landscape Collage">
+      </div>
+    </div>
+
+    <div class = "art">
+      <div class = "images">
+        <img src="../Gallery/Digital_Art/images/JazzPoster.webp" alt="Jazz Poster">
+      </div>
+      <div class = "descriptions">
+        <h4>JAZZ POSTER</h4>
+        <p><i>FEBRUARY 2026</i></p>
+        <p>This is a class project, made in Illustrator for an imaginary jazz concert.</p>
+      </div>
+    </div>
+
+    <div class="art">
+
+      <div class="descriptions">
+        <h4>"Changing the Cycle"</h4>
+        <p><i>NOVEMBER 2025</i></p>
+        <p>
+          This is graphics for the Grey Matter's newsletter in the Fall 2025 chapter.
+          Created informative and engaging artwork emphasizing the realities of the
+          menstrual cycle while highlighting femininity and strength, with a fun circus theme.
+        </p>
+      </div>
+      
+      <div class="images">
+        <button class="arrow left">❮</button>
+
+        <img class="slide" src="../Gallery/Digital_Art/images/GMJ_PMS1.webp">
+        <img class="slide" src="../Gallery/Digital_Art/images/GMJ_PMS2.webp">
+        <img class="slide" src="../Gallery/Digital_Art/images/GMJ_PMS3.webp">
+
+        <button class="arrow right">❯</button>
+      </div>
+
+    </div>
+
+    <div class = "art">
+      <div class = "images">
+        <img src="../Gallery/Digital_Art/images/Clowns.jpg" alt="Clown Digital Drawing">
+      </div>
+      <div class = "descriptions">
+        <h4>CLOWN DREAMS</h4>
+        <p><i>FEBRUARY 2025</i></p>
+        <p>This is a personal digital art piece inspired by the Tiktok "For the last time" trend.</p>
+      </div>
+    </div>
+
+    <div class = "art">
+      <div class = "descriptions">
+        <h4>DESPAIR GIRL</h4>
+        <p><i>FEBRUARY 2025</i></p>
+        <p>This is a personal digital art piece I created to practice coloring and shading techniques.</p>
+      </div>
+      <div class = "images">
+        <img src="../Gallery/Digital_Art/images/DespairGirl.jpg" alt="Girl Digital Drawing">
+      </div>
+    </div>
+
+    <div class = "art">
+      <div class="images">
+        <button class="arrow left">❮</button>
+        <img class="slide" src="../Gallery/Digital_Art/images/SeaCards.jpg">
+        <img class="slide" src="../Gallery/Digital_Art/images/[ Playing Cards Project ] Cover - Spring 2025.PNG">
+        <img class="slide" src="../Gallery/Digital_Art/images/[ Playing Cards Project ] Jack Card - Spring 2025.PNG">
+        <img class="slide" src="../Gallery/Digital_Art/images/[ Playing Cards Project ] Joker Card - Spring 2025.PNG">
+        <img class="slide" src="../Gallery/Digital_Art/images/[ Playing Cards Project ] King Card  - Spring 2025.PNG">
+        <img class="slide" src="../Gallery/Digital_Art/images/[ Playing Cards Project ] Queen Card - Spring 2025.PNG">
+        <button class="arrow right">❯</button>
+      </div>
+
+      <div class = "descriptions">
+        <h4>SEA ILLUSION PLAYING CARDS</h4>
+        <p><i>March 2025</i></p>
+        <p>These are playing cards I designed for a class project. The theme of the deck is "sea illusion," and each card features a unique design inspired by the ocean and its mysteries. I used a combination of digital art techniques to create the intricate patterns, with just black and white that bring the cards to life.</p>
+      </div>
+    </div>
+
+    <div class = "art">
+      <div class = "descriptions">
+        <h4>JAPANESE TRAIN STATIONARY</h4>
+        <p><i>May 2025</i></p>
+        <p>These are stationery pieces I created for a class project. The design is inspired by traditional Japanese train aesthetics, featuring calming and formal elements that reflect the cultural heritage of Japan.</p>
+      </div>
+      <div class = "images">
+        <img src="../Gallery/Digital_Art/images/Japanese_stationary.jpg" alt="Japanese Train Themed Stationary">
+      </div>
+    </div>
+
   </main>
    
 
@@ -67,4 +165,35 @@
 
 
 </body>
+
+
+  <script>
+    document.querySelectorAll(".images").forEach((container) => {
+
+      let current = 0;
+      const slides = container.querySelectorAll(".slide");
+
+      if (slides.length === 0) return;
+
+      function showSlide(index) {
+        slides.forEach(s => s.classList.remove("active"));
+        slides[index].classList.add("active");
+      }
+
+      function next() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }
+
+      function prev() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+      }
+
+      container.querySelector(".right")?.addEventListener("click", next);
+      container.querySelector(".left")?.addEventListener("click", prev);
+
+      showSlide(0);
+    });
+  </script>
 </html>
