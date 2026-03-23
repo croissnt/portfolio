@@ -234,6 +234,12 @@ img{
     border: 2px solid white;
 }
 
+video{
+    max-width: 100%;
+    max-height: 30rem;
+    border: 2px solid white;
+}
+
 .art{
     display: flex;
     justify-content:space-around;
