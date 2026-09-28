@@ -511,15 +511,17 @@
     color: var(--text-dim);
     margin: 0 0 12px;
   }
-  .demo-photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 10px;
-  }
-  .demo-photo-grid img {
-    height:250px;
-    width:auto;
-  }
+ .demo-photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.demo-photo-grid img {
+  height: 250px;
+  width: auto;
+  object-fit: contain;
+}
   .demo-placeholder-small {
     min-height: 110px;
     margin: 0;
